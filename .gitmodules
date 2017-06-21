@@ -1,0 +1,4 @@
+[submodule "Assets/Cradle"]
+	path = Assets/Cradle
+	url = https://github.com/daterre/Cradle.git
+	branch = submodulify
