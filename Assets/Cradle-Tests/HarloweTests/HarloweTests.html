@@ -17,7 +17,9 @@
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
 
 
 
@@ -135,7 +137,7 @@ Yay! This is the end of the test.</tw-passagedata><tw-passagedata pid="2" name="
   (assert: (random:1,6) is in (range:1,6), &quot;macro: random&quot;)
   
   (pass:)
-}</tw-passagedata><tw-passagedata pid="5" name="Markup_Scope_Styles" tags="" position="974,156">{
+}</tw-passagedata><tw-passagedata pid="5" name="Markup_Scope_Styles" tags="" position="974,157">{
 //italic(assert-style:&quot;italic&quot;, true)//
 (assert-style:&quot;italic&quot;, false)
 
@@ -196,7 +198,7 @@ This has margins 3/4 left, 1/4 right
       ---
   ----
      -----
-(pass:)</tw-passagedata><tw-passagedata pid="9" name="Markup_LineBreaks" tags="" position="719,159">This line\
+(pass:)</tw-passagedata><tw-passagedata pid="9" name="Markup_LineBreaks" tags="" position="718,158">This line\
 and this line
 \and this line, are actually just one line.\
 (assert-no-output: typeof(Cradle.LineBreak))
@@ -210,7 +212,7 @@ $naked
   [bright red(assert-hook: &quot;c2&quot;)]&lt;c2|
   (assert-hook: &quot;c0&quot;)
 ]
-(pass:)</tw-passagedata><tw-passagedata pid="12" name="Vars_It" tags="" position="325,293">{
+(pass:)</tw-passagedata><tw-passagedata pid="12" name="Vars_It" tags="" position="323,292">{
 (set: $red = &quot;eg&quot;)
 (set: $red = it + &quot;g&quot;)
 (assert: $red is &#x27;egg&#x27; and its length is 3, &quot;it/its&quot;)
@@ -294,6 +296,10 @@ $naked
 
   [[Result&lt;-Link left]]
   (assert-link: &quot;Link left&quot;, &quot;Result&quot;)
+  
+  (set: $name to &quot;Doron&quot;)
+  [[Hi $name! What&#x27;s up?-&gt;Result]]
+  (assert-link: &quot;Hi Doron! What&#x27;s up?&quot;, &quot;Result&quot;)
   
   (link-goto: &quot;Link-goto macro&quot;, &quot;Result&quot;)
   (assert-link: &quot;Link-goto macro&quot;, &quot;Result&quot;)

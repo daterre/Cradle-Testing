@@ -14,7 +14,7 @@ public class UnityTwineTestMacros: RuntimeMacros
 	[RuntimeMacro]
 	public void assertStyle(string setting, StoryVar value)
 	{
-		StoryStyle style = this.Story.GetCurrentStyle();
+		Style style = this.Story.GetCurrentStyle();
 		Assert.IsTrue(
 			value == style[setting],
 			string.Format("Group's \"{0}\" style setting is not {1}", setting, value)
@@ -29,7 +29,7 @@ public class UnityTwineTestMacros: RuntimeMacros
 	public void assertHook(string hookName)
 	{
 		Assert.IsTrue(
-			this.Story.CurrentGroup.Style.Get<string>(HarloweStyleSettings.Hook) == hookName,
+			this.Story.CurrentStyleGroup.Style.Get<string>(HarloweStyleSettings.Hook) == hookName,
 			string.Format("The current group isn't defined as a Harlowe-hook named'{0}'.", hookName)
 		);
 		Assert.IsTrue(
